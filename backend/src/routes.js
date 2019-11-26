@@ -6,7 +6,7 @@ import FaseController from './controllers/FaseController';
 
 const routes = new Router();
 
-routes.get('/fases', FaseController.store);
+routes.get('/allfases', FaseController.getAllFases);
 // routes.get('/users', JogoController.update);
 // routes.get('/users', UsuarioController.update);
 

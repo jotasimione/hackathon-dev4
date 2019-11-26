@@ -1,6 +1,6 @@
 import Sequelize, { Model } from 'sequelize';
 
-class User extends Model {
+class Fase extends Model {
   static init(sequelize) {
     super.init(
       {
@@ -11,6 +11,11 @@ class User extends Model {
       }
     );
   }
+
+  static async getFases() {
+    const fases = await Fase.findAll();
+    return fases;
+  }
 }
 
-export default User;
+export default Fase;
