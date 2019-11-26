@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     dialect: 'sqlite',
-    storage: './src/database/database',
+    storage: './src/database/database.sqlite3',
   },
   test: {
     dialect: 'sqlite',
@@ -9,6 +9,6 @@ module.exports = {
   },
   production: {
     dialect: 'sqlite',
-    storage: './src/database/database',
+    storage: './src/database/database.sqlite3',
   },
 };
