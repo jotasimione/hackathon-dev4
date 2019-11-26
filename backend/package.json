@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "DEV4",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "sequelize": "^5.21.2"
