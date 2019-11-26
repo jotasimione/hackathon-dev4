@@ -8,8 +8,8 @@ poderá haver passos que dependem de outros passos para que ele chegue ao final.
 Para isto,  Caso não validado, será demonstrado ao jogador uma dica de como resolver a situação, 
 senão ele irá demonstrar que o robo seguiu os passos corretamente, 
 demonstrando no final que houve sucesso, finalizando aquela situação (passando de fase). 
-Para cada exito, será demonstrado no final, ao jogador,
- o código (a definir a linguagem, prioritáriamente em portugol) com a logica executada para o sucesso do robo).
+Para cada exito, será demonstrado no final, ao jogador, o código (a definir a linguagem, 
+prioritáriamente em portugol) com a logica executada para o sucesso do robo).
 Sobre as validações, deverá haver validações se os passos estão coerentes e, 
 os passos que contém dependencias, 
 deverão ser validados se eles estão atrelados corretamente em relação aos passos executados.
