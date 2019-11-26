@@ -1,0 +1,13 @@
+{
+  "name": "dev-bot-backend",
+  "version": "1.0.0",
+  "description": "Back-end ",
+  "main": "index.js",
+  "author": "DEV4",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.1",
+    "sequelize": "^5.21.2"
+  }
+}
