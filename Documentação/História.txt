@@ -1,0 +1,16 @@
+História:
+Eu, jogador, irá acessar o jogo e, ao clicar em iniciar, será apresentado o jogo em sí.
+Sobre o jogo, contará uma história e,irá demonstrar situações em que o robo (personagem) 
+precisará solucionar problemas (fases), em ele irá tomar ações para seguir para chegar à um 
+resultado final (passar de fase/passar para o proximo nível). 
+Cada ação é um passo à ser tomado, de maneira lógica (sequencial) e, também, 
+poderá haver passos que dependem de outros passos para que ele chegue ao final. 
+Para isto,  Caso não validado, será demonstrado ao jogador uma dica de como resolver a situação, 
+senão ele irá demonstrar que o robo seguiu os passos corretamente, 
+demonstrando no final que houve sucesso, finalizando aquela situação (passando de fase). 
+Para cada exito, será demonstrado no final, ao jogador, o código (a definir a linguagem, 
+prioritáriamente em portugol) com a logica executada para o sucesso do robo).
+Sobre as validações, deverá haver validações se os passos estão coerentes e, 
+os passos que contém dependencias, 
+deverão ser validados se eles estão atrelados corretamente em relação aos passos executados.
+
