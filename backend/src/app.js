@@ -3,8 +3,6 @@ import cors from 'cors';
 import routes from './routes';
 
 import './database';
-import checkParams from './middlewares/checkParams';
-import checkBody from './middlewares/checkBody';
 
 class App {
   constructor() {
@@ -16,9 +14,6 @@ class App {
   middlewares() {
     this.server.use(express.json());
     this.server.use(cors());
-
-    this.server.use(checkParams);
-    this.server.use(checkBody);
   }
 
   routes() {
