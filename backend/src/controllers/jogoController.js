@@ -1,21 +1,20 @@
 import Jogo from '../models/Jogo';
 
 class JogoController {
-  // async update(req, res) {
-  //   if (!(await Jogo.findOne({ where: { email: req.body.email } }))) {
-  //     return res.status(400).json({ error: 'E-mail not found' });
-  //   }
-
-  //   const { id, name, email, provider } = await Jogo.update(req.body);
-  //   return res.json({ id, name, email, provider });
-  // }
-
-  async allJogos(req, res) {
+  async getById(req, res) {
     try {
-      const Jogos = await Jogo.allJogos();
+      return res.status(400).json(Jogo.getById(req.params.id));
+    } catch (error) {
+      return res.status(400).json({ error: 'getById Method is not found' });
+    }
+  }
+
+  async getAll(req, res) {
+    try {
+      const Jogos = await Jogo.getAll();
       return res.status(400).json(Jogos);
     } catch (error) {
-      return res.status(400).json({ error: 'allJogos Method is not found' });
+      return res.status(400).json({ error: 'getAll Method is not found' });
     }
   }
 }

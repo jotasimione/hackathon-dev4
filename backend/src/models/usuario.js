@@ -13,7 +13,11 @@ class Usuario extends Model {
     );
   }
 
-  static async allUsuarios() {
+  static async getById(id) {
+    return Usuario.findOne({ where: { id } });
+  }
+
+  static async getAll() {
     return Usuario.findAll({ attributes: ['id', 'name'] });
   }
 }

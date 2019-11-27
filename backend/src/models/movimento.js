@@ -13,7 +13,11 @@ class Movimento extends Model {
     );
   }
 
-  static async allMovimentos() {
+  static async getById(id) {
+    return Movimento.findOne({ where: { id } });
+  }
+
+  static async getAll() {
     return Movimento.findAll({ attributes: ['id', 'name'] });
   }
 }

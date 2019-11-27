@@ -13,7 +13,11 @@ class Jogo extends Model {
     );
   }
 
-  static async allJogos() {
+  static async getById(id) {
+    return Jogo.findOne({ where: { id } });
+  }
+
+  static async getAll() {
     return Jogo.findAll({ attributes: ['id', 'name'] });
   }
 }

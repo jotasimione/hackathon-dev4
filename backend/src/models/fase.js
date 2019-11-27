@@ -12,7 +12,11 @@ class Fase extends Model {
     );
   }
 
-  static async allFases() {
+  static async getById(id) {
+    return Fase.findOne({ where: { id } });
+  }
+
+  static async getAll() {
     return Fase.findAll({ attributes: ['id', 'name'] });
   }
 }
