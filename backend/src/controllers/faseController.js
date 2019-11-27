@@ -15,13 +15,12 @@ class FaseController {
   }
 
   async allFases(req, res) {
-    // try {
-    const fases = await Fase.allFases();
-    console.log(fases);
-    return res.status(400).json(fases);
-    // } catch (error) {
-    //   return res.status(400).json({ error: 'deu pau' });
-    // }
+    try {
+      const fases = await Fase.allFases();
+      return res.status(400).json(fases);
+    } catch (error) {
+      return res.status(400).json({ error: 'allFases Method is not found' });
+    }
   }
 }
 

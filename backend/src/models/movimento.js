@@ -1,11 +1,21 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const Movimento = sequelize.define('Movimento', {
-    moviment: DataTypes.STRING,
-    id_fase: DataTypes.INTEGER
-  }, {});
-  Movimento.associate = function(models) {
-    // associations can be defined here
-  };
-  return Movimento;
-};
+import Sequelize, { Model } from 'sequelize';
+
+class Movimento extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        id_fase: Sequelize.INTEGER,
+        movimento: Sequelize.STRING,
+      },
+      {
+        sequelize,
+      }
+    );
+  }
+
+  static async allMovimentos() {
+    return Movimento.findAll({ attributes: ['id', 'name'] });
+  }
+}
+
+export default Movimento;

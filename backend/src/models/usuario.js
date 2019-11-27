@@ -1,11 +1,21 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const Usuario = sequelize.define('Usuario', {
-    name: DataTypes.STRING,
-    surname: DataTypes.STRING
-  }, {});
-  Usuario.associate = function(models) {
-    // associations can be defined here
-  };
-  return Usuario;
-};
+import Sequelize, { Model } from 'sequelize';
+
+class Usuario extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        name: Sequelize.STRING,
+        surname: Sequelize.STRING,
+      },
+      {
+        sequelize,
+      }
+    );
+  }
+
+  static async allUsuarios() {
+    return Usuario.findAll({ attributes: ['id', 'name'] });
+  }
+}
+
+export default Usuario;

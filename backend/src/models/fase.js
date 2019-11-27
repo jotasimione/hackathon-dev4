@@ -13,10 +13,7 @@ class Fase extends Model {
   }
 
   static async allFases() {
-    const fases = await Fase.findAll();
-
-    // console.log(fases);
-    return fases;
+    return Fase.findAll({ attributes: ['id', 'name'] });
   }
 }
 
