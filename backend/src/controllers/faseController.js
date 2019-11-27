@@ -14,9 +14,11 @@ class FaseController {
     return res.json({ id, name, email, provider });
   }
 
-  async getAllFases(req, res) {
+  async allFases(req, res) {
     // try {
-    return res.status(400).json(Fase.getFases());
+    const fases = await Fase.allFases();
+    console.log(fases);
+    return res.status(400).json(fases);
     // } catch (error) {
     //   return res.status(400).json({ error: 'deu pau' });
     // }
