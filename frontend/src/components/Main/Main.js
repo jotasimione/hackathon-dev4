@@ -44,18 +44,28 @@ export default function Main() {
 
   return (
     <Container>
-      <div className="Linha">
-        {data.map(card => (
-          <Link to={"./Game/" + card.id}>
-          {/* <a href="http://www.uol.com.br"> */}
-            <div align="center" id={card.id} className="Card">
-              <h2>{card.title}</h2>
-              <img src={card.image} alt="" />
-            </div>
-          {/* </a> */}
-          </Link>
-        ))}
-        <div style={{ clear: "both" }}></div>
+      <div className="Header" align="center">
+        EasyLogic
+      </div>
+
+      <div className="Corpo">
+        <div className="Linha">
+          {data.map(card => (
+            <Link to={"./Game/" + card.id}>
+              {/* <a href="http://www.uol.com.br"> */}
+              <div align="center" id={card.id} className="Card">
+                <h2>{card.title}</h2>
+                <img src={card.image} alt="" />
+              </div>
+              {/* </a> */}
+            </Link>
+          ))}
+          <div style={{ clear: "both" }}></div>
+        </div>
+      </div>
+
+      <div className="Rodape" align="center">
+        DEV4
       </div>
 
       {/* <Linha>
