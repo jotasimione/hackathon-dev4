@@ -1,4 +1,4 @@
-import Fase from '../models/fase';
+import Fase from '../models/Fase';
 
 const Sequelize = require('sequelize');
 

@@ -1,5 +1,3 @@
-
-
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('Fase', {
@@ -10,6 +8,9 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       name: {
+        type: Sequelize.STRING,
+      },
+      description: {
         type: Sequelize.STRING,
       },
       createdAt: {
