@@ -18,7 +18,7 @@ routes.get('/usuario:id', UsuarioController.getById);
 routes.get('/movimento:id', MovimentoController.getById);
 
 routes.get('/usuarios:id/score', UsuarioController.getScore);
-routes.get('/fase:id/valida', JogoController.validaFase);
+routes.get('/fase:id/valida', FaseController.validaFase);
 routes.get('/jogo:id_jogo&:id_usuario', JogoController.getJornada);
 
 export default routes;

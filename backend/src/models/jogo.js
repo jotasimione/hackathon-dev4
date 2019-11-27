@@ -13,6 +13,10 @@ class Jogo extends Model {
     );
   }
 
+  static async getJornadaByUsuario(id_jogo, id_usuario) {
+    return `Jornada do jogo ID:${id_jogo} com o Usuario ID:${id_usuario}`;
+  }
+
   static async getById(id) {
     return Jogo.findOne({ where: { id } });
   }
